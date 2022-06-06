@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ student.f_name }} {{ student.l_name }} </title>
+        <link lang='sass' rel="stylesheet" href="./static/styles/aboutaima.css">
+        <style>
+            html {
+              scroll-behavior: smooth;
+            }
+            
+            #section1 {
+              height: 600px;
+            }
+            
+            #section2 {
+              height: 1070px;
+            }
+
+            #section3 {
+              height: 900px;
+            }
+
+            #section4 {
+              height: 700px;
+            }
+
+            </style>
+    </head>
+
+    <body>
+      <div class="dropdown"> <!--create dropdown menu-->
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#section2">Portfolio</a>
+          <a href="#section3">Hobbies</a>
+          <a href="#section4">Travel</a>
+        </div>
+      </div>
+
+
+      <!--prevent webpage overflow-->
+      <div class="overflow-wrap"> 
+
+        <!--PIC-->
+        <div class="main" id="section1">
+            <div class="blurred-box">
+                <div class="user-login-box">
+                <span class="user-icon"></span>
+                <div class="user-name"><strong> {{ student.f_name }} {{ student.l_name }} </strong></div>
+                </div>
+                <div class="button page-link" dest="section2">
+                  <a href="#section2"><b><font color="#FFFFFF">About Me</font></b></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- skills & work experience -->
+        <div class="main" id="section2">
+
+          <div class="float-container">
+
+            <!-- skills -->
+            <div class="float-child1">
+              <div class="glass" style="left: 30px">
+                <p style="font-size:25px">My name is  {{ student.f_name }} {{ student.l_name }}.
+                  <br> I'm a rising senior at
+                  <br> {{ student.school }}
+                  <br> pursuing my Bachelor's in
+                  <br> {{ student.major }}!
+                  <br >My hobbies include <b><font color="#8630e1">{{ student.hob1 }}</font></b>,
+                  <br> <b><font color="#595be1">{{ student.hob2 }}</font></b>, <b><font color="#d78feb">{{ student.hob3 }}</font></b>, and 
+                  <br> <b><a href="#section4">{{ student.hob4 }}</a></b>!
+                </p>
+              </div>
+            </div>
+
+            <!-- work experience -->
+            <div class="float-child2">
+              <img class="a" src="https://lh3.googleusercontent.com/WRyH-nFc4pYhiBB6wBltXiknOscxaKyWU_enTlB9qMIxVYwGe3h2RipTYCxhdnnB8xTMMBiAvjEmAXRPtFJAZhf3NMZRrGe5VsvnH3-n7m4ob1c4JUx0nphBnAsGyPfp3Tq4OGLz0bk=w2400">
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT ME & HOBBIES -->
+
+        <!-- about me -->
+        <div class="main" id="section3">
+
+          <div class="float-container">
+
+            <!-- hobbies -->
+            <div class="float-child3">
+              <a href="https://www.instagram.com/juvenileperceptions/">
+                <img class="b" src="https://lh3.googleusercontent.com/_S65LQIxud-Nm2ktlVWdzwSHKbN0xUZ5XkyVk_Ko3ULtr74qLtRst_UXXwVjauiWLdIuYMZdHl_Gy9KlxQQ51E-nefZQoYj_LsGzWtM-LGMQdxVNpAx6M7kY8WkCL34ASRVfXIj_Z7I=w2400">
+              </a>
+            </div>
+
+            <div class="float-child4">
+              <div>
+                <p><font color="#FFFFFF">Python</font></p>
+                <div class="container">
+                  <div class="skills py">90%</div>
+                </div>
+
+                <p><font color="#FFFFFF">Matlab</font></p>
+                <div class="container">
+                  <div class="skills mat">70%</div>
+                </div>
+
+                <p><font color="#FFFFFF">HTML</font></p>
+                <div class="container">
+                  <div class="skills html">80%</div>
+                </div>
+
+                <p><font color="#FFFFFF">CSS</font></p>
+                <div class="container">
+                  <div class="skills css">40%</div>
+                </div>
+
+                <p><font color="#FFFFFF">C</font></p>
+                <div class="container">
+                  <div class="skills c">50%</div>
+                </div>
+
+                <p><font color="#FFFFFF">Canva</font></p>
+                <div class="container">
+                  <div class="skills canva">90%</div>
+                </div>
+
+                <p><font color="#FFFFFF">G-Suite</font></p>
+                <div class="container">
+                  <div class="skills g-suite">100%</div>
+                </div>
+
+                <p><font color="#FFFFFF">Microsoft Office</font></p>
+                <div class="container">
+                  <div class="skills ms">80%</div>
+                </div>
+
+                <p><font color="#FFFFFF">English</font></p>
+                <div class="container">
+                  <div class="skills eng">100%</div>
+                </div>
+
+                <p><font color="#FFFFFF">Spanish</font></p>
+                <div class="container">
+                  <div class="skills span">60%</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!--TRAVEL-->
+        <div class="main" id="section4">
+            <iframe width="1450" height="1050" src="https://datastudio.google.com/embed/reporting/ffe81dbd-f738-43e0-a588-f1d21b287cce/page/W9buC" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="bottom-navbar">
+        <a href="#section1">Back to Top</a>
+      </div>
+    </body>
+
+</html>
+
