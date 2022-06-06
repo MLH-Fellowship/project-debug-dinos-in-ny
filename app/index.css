@@ -5,6 +5,7 @@ body{
     font-family: Poppins;
 }
 
+
 /*background colour*/
 .topnav {
   background-color: black;
@@ -22,13 +23,13 @@ body{
 }
 
 /*colour of links on hover*/
-.topnav a:hover {
+.dropdown-item a:hover {
   background-color: #ddd;
   color: black;
 }
 
 /*color to the active link*/
-.topnav a.active {
+.dropdown-item a.active {
   background-color: #106617;
   color: white;
 }
