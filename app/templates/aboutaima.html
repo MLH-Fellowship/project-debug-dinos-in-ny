@@ -70,10 +70,10 @@
                   <br> I'm a rising senior at
                   <br> {{ student.school }}
                   <br> pursuing my Bachelor's in
-                  <br> Electrical Engineering!
-                  <br >My hobbies include <b><font color="#8630e1">painting</font></b>,
-                  <br> <b><font color="#595be1">writing</font></b>, <b><font color="#d78feb">reading</font></b>, and 
-                  <br> <b><a href="#section4">exploring new places</a></b>!
+                  <br> {{ student.major }}!
+                  <br >My hobbies include <b><font color="#8630e1">{{ student.hob1 }}</font></b>,
+                  <br> <b><font color="#595be1">{{ student.hob2 }}</font></b>, <b><font color="#d78feb">{{ student.hob3 }}</font></b>, and 
+                  <br> <b><a href="#section4">{{ student.hob4 }}</a></b>!
                 </p>
               </div>
             </div>
@@ -167,3 +167,4 @@
     </body>
 
 </html>
+
