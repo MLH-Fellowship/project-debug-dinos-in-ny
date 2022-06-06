@@ -68,9 +68,9 @@
               <div class="glass" style="left: 30px">
                 <p style="font-size:25px">My name is {{ student.f_name }} {{ student.l_name }}.
                   <br>I'm a rising sophomore at {{ student.school }}
-                  <br>pursuing my Bachelor's in Computer Science!
-                  <br>My hobbies include <b><font color="#d6ab28">crafting (specifically quilling)</font></b>,
-                  <br><b><font color="#097f03">dancing</font></b>, <b><font color="#c76f17">reading</font></b>, and <b><a href="#section4">exploring new places</a></b>!
+                  <br>pursuing my Bachelor's in {{ student.major }}!
+                  <br>My hobbies include <b><font color="#d6ab28">{{ student.hob1 }}</font></b>,
+                  <br><b><font color="#097f03">{{ student.hob2 }}</font></b>, <b><font color="#c76f17">{{ student.hob3 }}</font></b>, and <b><a href="#section5">{{ student.hob4 }}</a></b>!
                 </p>
               </div>
             </div>
@@ -169,3 +169,4 @@
     </body>
 
 </html>
+
