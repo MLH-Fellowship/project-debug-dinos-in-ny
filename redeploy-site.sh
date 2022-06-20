@@ -1,43 +1,15 @@
 
-#CHALLENGE 2
-
-#!/bin/bash
-if [ -e $1 ]
-num = ls -d *$1* | wc -l
-then
-    echo 'Found $num matches'
-    echo readlink -$1
-else
-then
-    echo 'Found 0 matches'
-fi
-
-##
-
-ls -d *$1* | wc -l
-
-##
-
-wc -l to count lines
-
-#CHALLENGE 3
-
 #!/bin/bash
 
-$1
-while [ $? -eq 0 ]; do
-    $1
-done
+tmux kill-server
+cd mlh-portfolio
 
+git fetch && git reset origin/main --hard
 
+python3 -m venv python3-virtualenv
+source python3-virtualenv/bin/activate
+pip install -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
 
-#CHALLENGE 4
-
-#!/bin/bash
-
-curl -o text.txt https://www.cryptingup.com/api/markets
-
-tr -c '[:alnum:]' '[\n*]' < text.txt | sort | uniq -c | sort -nr | head -10
-
-
-
+tmux new-session -d -s rbt123
