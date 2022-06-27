@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
+from peewee import *
 
 class Person:
     def __init__(self, f_name, l_name, school, major, hob1, hob2, hob3, hob4):
@@ -18,6 +19,14 @@ class Person:
 load_dotenv()
 app = Flask(__name__)
 
+mydb = 
+MySQLDatabase(os.getenv( "MYSQL_DATABASE"),
+    user=os.getenv("MYSQL_USER"),
+    password=os.getenv( "MYSQL_PASSWORD"),
+    host=os.getenv("MYSQL_HOST"),
+    port=3306
+)
+print (mydb)
 
 sristi = Person("Sristi", "Panchu", "Tufts University", "Computer Science", "crafting (specifically quilling)", "dancing", "reading", "exploring new places")
 aima = Person("Aima", "Alakhume", "New York University", "Electrical Engineering", "painting", "writing", "reading", "exploring new places")
