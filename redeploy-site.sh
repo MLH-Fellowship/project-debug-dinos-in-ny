@@ -2,7 +2,7 @@
 
 cd
 
-cd project-debug-dinos-in-ny
+cd proj-ddinny
 
 git fetch && git reset origin/main --hard
 
