@@ -6,6 +6,8 @@ python -m venv python3-virtualenv
 source python3-virtualenv/bin/activate
 pip install -r requirements.txt
 pip install --upgrade pip
+pip install peewee
+pip install pymysql
 
 tmux new -d -s site
 
