@@ -58,7 +58,7 @@ def abaima():
 def absristi():
     return render_template('aboutsristi.html', student = sristi)
 
-@app.route('/ap/timeline_post', methods=['POST'])
+@app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
     name = request.form['name']
     email = request.form['email']
@@ -67,7 +67,7 @@ def post_time_line_post():
 
     return model_to_dict(timeline_post)
 
-@app.route('/ap/timeline_post', methods=['GET'])
+@app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
     return {
         'timeline_posts': [
