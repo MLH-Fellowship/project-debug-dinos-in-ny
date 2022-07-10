@@ -1,9 +1,5 @@
 #!/bin/bash
 
-cd
-
-cd proj-ddinny
-
 git fetch && git reset origin/main --hard
 
 python -m venv python3-virtualenv
