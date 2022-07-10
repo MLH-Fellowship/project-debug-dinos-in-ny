@@ -1,5 +1,7 @@
 #!/bin/bash
 
+tmux kill-server
+
 git fetch && git reset origin/main --hard
 
 python -m venv python3-virtualenv
