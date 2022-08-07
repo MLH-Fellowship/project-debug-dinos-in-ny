@@ -38,3 +38,4 @@ services:
   
 volumes:
   mydatabase:
+  nginx_secrets:
