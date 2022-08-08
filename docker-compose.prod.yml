@@ -20,9 +20,9 @@ services:
     volumes:
       - mydatabase:/var/lib/mysql
       
-    nginx:
-      container_name: nginx
-      image: jonasal/nginx-certbot
+   nginx:
+     container_name: nginx
+     image: jonasal/nginx-certbot
       restart: always
       environment:
         - CERTBOT_EMAIL=sristipanchu@gmail.com
@@ -33,7 +33,7 @@ services:
         - nginx_secrets:/etc/letsencrypt
         - ./user_conf.d:/etc/nginx/user_conf.d
       depends_on:
-        - myportfolio
+        - myportfolio 
   
   
 volumes:
