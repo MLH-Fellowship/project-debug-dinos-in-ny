@@ -38,7 +38,7 @@ class AppTestCase(unittest.TestCase):
 
         # TODO Add more tests relating to the timeline page - DONE
         response = self.client.get("/api/timeline_post")
-        assert response.status.code == 200
+        assert response.status_code == 200
         assert response.is_json
         json = response.get_json()
         assert len(json["timeline_posts"]) == 1
