@@ -13,7 +13,7 @@ class AppTestCase(unittest.TestCase):
     def test_home(self):
         response = self.client.get("/")
         assert response.status_code == 200
-        html = response.get_data(as_test=True)
+        html = response.get_data(as_text=True)
         assert "<title>MLH Fellow</title>" in html
 
         #TODO Add more tests relating to the home page - DONE
@@ -48,19 +48,19 @@ class AppTestCase(unittest.TestCase):
         response = self.client.post("/api/timeline_post", data=
         {"email": "john@example.com", "content": "Hello world, I'm John"})
         assert response.status_code == 400
-        html = response.get_data(as_test = True)
+        html = response.get_data(as_text = True)
         assert "Invalid name" in html
 
         #POST request with empty content 
         response = self.client.post("/api/timeline_post", data=
         {"name": "John Doe", "email": "john@example.com", "content": ""})
         assert response.status_code == 400
-        html = response.get_data(as_test = True)
+        html = response.get_data(as_text = True)
         assert "Invalid content" in html
 
         # POST request with malformed email
         response = self.client.post("/api/timeline_post", data=
         {"name": "John Doe", "email": "not-an-email", "content": "Hello world, I'm John"})
         assert response.status_code == 400
-        html = response.get_data(as_test = True)
+        html = response.get_data(as_text = True)
         assert "Invalid email" in html
